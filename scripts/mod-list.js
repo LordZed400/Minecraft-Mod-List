@@ -87,6 +87,38 @@ function getFileVar(version) {
   return "list_" + version.replaceAll(".", "");
 }
 
+function generateAdditionalLinks() {
+  const linkList = additional_links;
+
+  $("#additional-links").html("");
+
+  linkList.forEach((element) => {
+    const row = generateElement("div", "row mod-row");
+
+    const name = generateElement("div", "col-6 mod-name", element.name);
+
+    const linkElement = generateElement("div", "col-6 mod-link");
+
+    element.links.forEach((link, index) => {
+      const anchorList = generateElement("a", "", link.title);
+      anchorList.attr({
+        target: "_blank",
+        href: link.url,
+      });
+      linkElement.append(anchorList);
+      if (index != element.links.length) {
+        const breakElement = $(`<br/>`);
+        linkElement.append(breakElement);
+      }
+    });
+
+    row.append(name);
+    row.append(linkElement);
+
+    $("#additional-links").append(row);
+  });
+}
+
 var currentVersion = "1.18.2";
 
 $(function () {
@@ -95,4 +127,5 @@ $(function () {
     changeVersion(this.value);
   });
   changeVersion(currentVersion);
+  generateAdditionalLinks();
 });
