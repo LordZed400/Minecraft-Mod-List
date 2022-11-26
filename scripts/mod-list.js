@@ -4,6 +4,11 @@ function manageList(list, includeVersion) {
   $("#fabric-mods").html("");
 
   modList.forEach((element) => {
+    const fileLink = element.link.slice(0, element.link.lastIndexOf("/"));
+    const fileName = element.link.split("/").pop();
+    const downloadLink =
+      fileLink.slice(0, fileLink.lastIndexOf("/")) + `/download/${fileName}`;
+
     const row = generateElement("div", "row mod-row");
 
     const name = generateElement("div", "col-4 mod-name", element.name);
@@ -20,15 +25,29 @@ function manageList(list, includeVersion) {
 
     const link = generateElement("div", "col-4 mod-link");
 
-    const anchorTag = generateElement("a", "", "Download Link");
-    anchorTag.attr({
+    const anchorList = generateElement("a", "", "List");
+    anchorList.attr({
+      target: "_blank",
+      href: fileLink,
+    });
+
+    const anchorFile = generateElement("a", "", "File");
+    anchorFile.attr({
       target: "_blank",
       href: element.link,
     });
 
+    const anchorDownload = generateElement("a", "", "Download");
+    anchorDownload.attr({
+      target: "_blank",
+      href: downloadLink,
+    });
+
     row.append(name);
     row.append(version);
-    link.append(anchorTag);
+    link.append(anchorList);
+    link.append(anchorFile);
+    link.append(anchorDownload);
     row.append(link);
 
     $("#fabric-mods").append(row);

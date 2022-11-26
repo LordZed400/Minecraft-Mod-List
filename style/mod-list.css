@@ -76,6 +76,10 @@
     padding-left: 15px;
 }
 
+.mod-link a {
+    margin-right: 15px;
+}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1300px;
