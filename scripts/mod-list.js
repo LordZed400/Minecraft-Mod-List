@@ -45,7 +45,8 @@ function generateElement(elementStr = "div", classStr = "", textStr = "") {
 function changeVersion(version) {
   const fileVar = getFileVar(version);
   var jsonData = window[fileVar];
-  manageList(jsonData, currentVersion);
+  $(".game-header-art").css("background-image", `url(${jsonData.banner})`);
+  manageList(jsonData.modList, currentVersion);
 }
 
 function sort(list) {

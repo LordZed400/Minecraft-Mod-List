@@ -26,7 +26,6 @@
 }
 
 .game-header-art {
-    background-image: url('../img/banner.png');
     background-position: 50%;
     z-index: -1;
     width: 100%;
