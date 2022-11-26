@@ -15,7 +15,7 @@ function manageList(list, includeVersion) {
     );
 
     if (element.version != includeVersion) {
-      version.style.color = "red";
+      version.css("color", "red");
     }
 
     const link = generateElement("div", "col-4 mod-link");
@@ -46,7 +46,7 @@ function changeVersion(version) {
   const fileVar = getFileVar(version);
   var jsonData = window[fileVar];
   $(".game-header-art").css("background-image", `url(${jsonData.banner})`);
-  manageList(jsonData.modList, currentVersion);
+  manageList(jsonData.modList, version);
 }
 
 function sort(list) {
