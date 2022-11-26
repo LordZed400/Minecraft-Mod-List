@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x16">
+	<title>My Fabric mods</title>
+	<link rel="stylesheet" href="./style/mod-list.css"></link>
+</head>
+
+<body>
+	<header class="game-header">
+		<div class="w-full h-full absolute bg-no-repeat bg-cover z--1 game-header-art"></div>
+	</header>
+	<div class="main-container">
+		<div class="container">
+			<div class="row borderless-row">
+				<div class="col-12 title">
+					<h1 class="page-title">My Minecraft Mods Collection</h1>
+				</div>
+			</div>
+
+			<div class="row borderless-row main-row">
+				<div class="col-6">
+					<h4 class="mod-title">Fabric Mods</h4>
+					<div class="container-fluid list-container">
+						<div class="row borderless-row">
+							<div class="col-4 mod-header mod-name">Name</div>
+							<div class="col-4 mod-header text-center">Version</div>
+						</div>
+
+						<div class="row borderless-row">
+							<div class="col-12">
+								
+							</div>
+						</div>
+						
+						<div id="fabric-mods"></div>
+			
+					</div>
+				</div>
+				<div class="col-6">
+					<h4 class="mod-title">Additional Links</h4>
+					<div class="container-fluid list-container">
+						<div class="row borderless-row">
+							<div class="col-6 mod-header mod-name">Name</div>
+						</div>
+			
+						<div class="row borderless-row">
+							<div class="col-12">
+								
+							</div>
+						</div>
+						
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Fabric Installer</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://fabricmc.net/use/">
+									Download Link
+								</a>
+							</div>
+						</div>
+						
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Optifine</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.optifine.net/downloads">
+									Download Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Server JAR</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.minecraft.net/en-us/download/server">
+									Download Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Vanilla Tweaks</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://vanillatweaks.net/picker/resource-packs/">
+									Resource Packs
+								</a>
+								<br/>
+								<a target="_blank" href="https://vanillatweaks.net/picker/datapacks/">
+									Data Packs
+								</a>
+								<br/>
+								<a target="_blank" href="https://vanillatweaks.net/picker/crafting-tweaks/">
+									Crafting Tweaks
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Command Generation</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.digminecraft.com/generators/give_armor.php">
+									Give Armour
+								</a>
+								<br/>
+								<a target="_blank" href="https://www.digminecraft.com/generators/give_weapon.php">
+									Give Weapons
+								</a>
+								<br/>
+								<a target="_blank" href="https://www.digminecraft.com/generators/give_tool.php">
+									Give Tools
+								</a>
+								<br/>
+								<a target="_blank" href="https://www.digminecraft.com/generators/summon_mob.php">
+									Summon Mobs
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Chunk Information</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.chunkbase.com/apps/">
+									View Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Pixel Circle/Oval Generator</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://donatstudios.com/PixelCircleGenerator">
+									View Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Plotz 2D/3D Sphere Generator</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.plotz.co.uk/plotz-model.php?model=Sphere">
+									View Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Portal Coordinates calculator</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://nethercalculator.com/">
+									View Link
+								</a>
+							</div>
+						</div>
+
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Crafting Recipe</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.minecraft-crafting.net/">
+									View Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">MCA Selector</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://www.optifine.net/downloads">
+									Download Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">NBT Explorer</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://github.com/jaquadro/NBTExplorer/releases/">
+									Download Link
+								</a>
+							</div>
+						</div>
+
+						<div class="row mod-row">
+							<div class="col-6 mod-name">Name MC</div>
+							<div class="col-6 mod-link">
+								<a target="_blank" href="https://namemc.com/minecraft-skins">
+									View Link
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" id="list-1182" src="./scripts/1.18.2.json"></script>
+	<script type="text/javascript" id="list-1192" src="./scripts/1.19.2.json"></script>
+	<script src="./scripts/jquery-3.6.1.min.js"></script>
+	<script src="./scripts/mod-list.js"></script>
+</body>
+</html>
+
+<!-- Placeholder elements
+<div class="row mod-row">
+	<div class="col-4 mod-name"></div>
+	<div class="col-4 mod-version">1.18.2</div>
+	<div class="col-4 mod-link">
+		<a target="_blank" href="">
+			Download Link
+		</a>
+	</div>
+</div>
+-->
