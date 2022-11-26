@@ -71,5 +71,9 @@ function getFileVar(version) {
 var currentVersion = "1.18.2";
 
 $(function () {
+  const selectElement = $("#version");
+  selectElement.change(function () {
+    changeVersion(this.value);
+  });
   changeVersion(currentVersion);
 });
