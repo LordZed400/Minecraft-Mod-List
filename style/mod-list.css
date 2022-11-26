@@ -4,7 +4,7 @@
 }
 
 .game-header {
-    background: linear-gradient(180deg, rgba(250, 249, 250, 0.3) 0, rgba(250, 249, 250, 0.9) 74.03%, #FAF9FA 100%);
+    background: linear-gradient(180deg, rgba(250, 249, 250, 0.3) 0, rgba(250, 249, 250, 0.5) 90%, #FAF9FA 100%);
     border-color: #a49fad;
     border-style: solid;
     border-width: 0;
@@ -17,10 +17,11 @@
     justify-content: space-between;
     min-height: 18rem;
     margin: 0;
-    margin-bottom: -150px;
+    margin-bottom: -100px;
     overflow: hidden;
     padding: 0;
     position: relative;
+    transition: 0.5s;
     vertical-align: baseline;
 }
 
@@ -44,8 +45,11 @@
 }
 
 .page-title {
+    background-color: rgba(0,0,0,.5);
     color: white;
+    display: inline-block;
     font-family: "Minecraft";
+    padding: 10px 20px 20px;
     text-align: center;
     transform: translateY(-80px);
     
@@ -55,6 +59,7 @@
 .mod-title {
     color: black;
     font-family: "Minecraft";
+    margin-bottom: 10px;
     text-align: center;
 
     -webkit-text-stroke: 1px pink;
