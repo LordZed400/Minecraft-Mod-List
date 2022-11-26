@@ -56,13 +56,12 @@ function sort(list) {
 }
 
 function displayList(fileVar) {
-  var jsonData = JSON.parse(list).html();
+  var jsonData = window[fileVar];
   manageList(jsonData, currentVersion);
 }
 
 function getFileVar(version) {
-  // return "list" + version.replaceAll(".", "");
-  return "list";
+  return "list_" + version.replaceAll(".", "");
 }
 
 var currentVersion = "1.18.2";
