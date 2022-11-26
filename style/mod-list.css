@@ -101,6 +101,10 @@
 }
 
 #version-select {
+    padding: 20px;
     position: absolute;
-    padding: 15px;
+}
+
+#version {
+    width: 100px;
 }
