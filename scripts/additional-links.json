@@ -4,7 +4,7 @@ additional_links = [
     "links": [
       {
         "title": "Download Link",
-        "link": "https://fabricmc.net/use/"
+        "url": "https://fabricmc.net/use/"
       }
     ]
   },
@@ -13,7 +13,7 @@ additional_links = [
     "links": [
       {
         "title": "Download Link",
-        "link": "https://www.optifine.net/downloads"
+        "url": "https://www.optifine.net/downloads"
       }
     ]
   },
@@ -22,7 +22,7 @@ additional_links = [
     "links": [
       {
         "title": "Download Link",
-        "link": "https://www.minecraft.net/en-us/download/server"
+        "url": "https://www.minecraft.net/en-us/download/server"
       }
     ]
   },
@@ -31,108 +31,108 @@ additional_links = [
     "links": [
       {
         "title": "Resource Packs",
-        "link": "https://vanillatweaks.net/picker/resource-packs/"
+        "url": "https://vanillatweaks.net/picker/resource-packs/"
       },
       {
         "title": "Data Packs",
-        "link": "https://vanillatweaks.net/picker/datapacks/"
+        "url": "https://vanillatweaks.net/picker/datapacks/"
       },
       {
         "title": "Crafting Tweaks",
-        "link": "https://vanillatweaks.net/picker/crafting-tweaks/"
+        "url": "https://vanillatweaks.net/picker/crafting-tweaks/"
       }
     ]
   },
   {
     "name": "Command Generation",
-    "link": [
+    "links": [
       {
         "title": "Give Armour",
-        "link": "https://www.digminecraft.com/generators/give_armor.php"
+        "url": "https://www.digminecraft.com/generators/give_armor.php"
       },
       {
         "title": "Give Weapons",
-        "link": "https://www.digminecraft.com/generators/give_weapon.php"
+        "url": "https://www.digminecraft.com/generators/give_weapon.php"
       },
       {
         "title": "Give Tools",
-        "link": "https://www.digminecraft.com/generators/give_tool.php"
+        "url": "https://www.digminecraft.com/generators/give_tool.php"
       },
       {
         "title": "Summon Mobs",
-        "link": "https://www.digminecraft.com/generators/summon_mob.php"
+        "url": "https://www.digminecraft.com/generators/summon_mob.php"
       }
     ]
   },
   {
     "name": "Chunk Information",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://www.chunkbase.com/apps/"
+        "url": "https://www.chunkbase.com/apps/"
       }
     ]
   },
   {
     "name": "Pixel Circle/Oval Generator",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://donatstudios.com/PixelCircleGenerator"
+        "url": "https://donatstudios.com/PixelCircleGenerator"
       }
     ]
   },
   {
     "name": "Plotz 2D/3D Sphere Generator",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://www.plotz.co.uk/plotz-model.php?model=Sphere"
+        "url": "https://www.plotz.co.uk/plotz-model.php?model=Sphere"
       }
     ]
   },
   {
     "name": "Portal Coordinates calculator",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://nethercalculator.com/"
+        "url": "https://nethercalculator.com/"
       }
     ]
   },
   {
     "name": "Crafting Recipe",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://www.minecraft-crafting.net/"
+        "url": "https://www.minecraft-crafting.net/"
       }
     ]
   },
   {
     "name": "MCA Selector",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://github.com/Querz/mcaselector"
+        "url": "https://github.com/Querz/mcaselector"
       }
     ]
   },
   {
     "name": "NBT Explorer",
-    "link": [
+    "links": [
       {
         "title": "Download Link",
-        "link": "https://github.com/jaquadro/NBTExplorer/releases/"
+        "url": "https://github.com/jaquadro/NBTExplorer/releases/"
       }
     ]
   },
   {
     "name": "Name MC",
-    "link": [
+    "links": [
       {
         "title": "View Link",
-        "link": "https://namemc.com/minecraft-skins"
+        "url": "https://namemc.com/minecraft-skins"
       }
     ]
   }
