@@ -42,6 +42,12 @@ function generateElement(elementStr = "div", classStr = "", textStr = "") {
   return element;
 }
 
+function changeVersion(version) {
+  const fileVar = getFileVar(version);
+  var jsonData = window[fileVar];
+  manageList(jsonData, currentVersion);
+}
+
 function sort(list) {
   list.sort((a, b) => {
     let x = a.name.toLowerCase();
@@ -57,11 +63,6 @@ function sort(list) {
   return list;
 }
 
-function displayList(fileVar) {
-  var jsonData = window[fileVar];
-  manageList(jsonData, currentVersion);
-}
-
 function getFileVar(version) {
   return "list_" + version.replaceAll(".", "");
 }
@@ -69,5 +70,5 @@ function getFileVar(version) {
 var currentVersion = "1.18.2";
 
 $(function () {
-  displayList(getFileVar(currentVersion));
+  changeVersion(currentVersion);
 });
