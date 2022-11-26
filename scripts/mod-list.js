@@ -1,7 +1,7 @@
 function manageList(list, includeVersion) {
   var modList = sort(list);
 
-  document.getElementById("fabric-mods").innerHTML = "";
+  $("#fabric-mods").html("");
 
   modList.forEach((element) => {
     const row = generateElement("div", "row mod-row");
@@ -21,22 +21,24 @@ function manageList(list, includeVersion) {
     const link = generateElement("div", "col-4 mod-link");
 
     const anchorTag = generateElement("a", "", "Download Link");
-    anchorTag.setAttribute("target", "_blank");
-    anchorTag.setAttribute("href", element.link);
+    anchorTag.attr({
+      target: "_blank",
+      href: element.link,
+    });
 
-    row.appendChild(name);
-    row.appendChild(version);
-    link.appendChild(anchorTag);
-    row.appendChild(link);
+    row.append(name);
+    row.append(version);
+    link.append(anchorTag);
+    row.append(link);
 
-    document.getElementById("fabric-mods").appendChild(row);
+    $("#fabric-mods").append(row);
   });
 }
 
 function generateElement(elementStr = "div", classStr = "", textStr = "") {
-  const element = document.createElement(elementStr);
-  element.className = classStr;
-  element.innerHTML = textStr;
+  const element = $(`<${elementStr}></${elementStr}>`);
+  element.addClass(classStr);
+  element.html(textStr);
   return element;
 }
 
