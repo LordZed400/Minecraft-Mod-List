@@ -135,5 +135,14 @@ additional_links = [
         "url": "https://namemc.com/minecraft-skins"
       }
     ]
+  },
+  {
+    "name": "SeedcrackerX",
+    "links": [
+      {
+        "title": "View Link",
+        "url": "https://github.com/19MisterX98/SeedcrackerX"
+      }
+    ]
   }
 ]
