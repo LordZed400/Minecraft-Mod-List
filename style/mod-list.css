@@ -117,3 +117,7 @@
 #version {
     width: 100px;
 }
+
+.resource-pack-container {
+    margin-top: 25px;
+}

@@ -66,6 +66,7 @@ function changeVersion(version) {
   var jsonData = window[fileVar];
   $(".game-header-art").css("background-image", `url(${jsonData.banner})`);
   manageList(jsonData.modList, version);
+  generateResourcePacks(jsonData.resourcePacks, version);
 }
 
 function sort(list) {
@@ -116,6 +117,62 @@ function generateAdditionalLinks() {
     row.append(linkElement);
 
     $("#additional-links").append(row);
+  });
+}
+
+function generateResourcePacks(list, includeVersion) {
+  var resourcePacks = sort(list);
+
+  $("#resource-packs").html("");
+
+  resourcePacks.forEach((element) => {
+    const fileLink = element.link.slice(0, element.link.lastIndexOf("/"));
+    const fileName = element.link.split("/").pop();
+    const downloadLink =
+      fileLink.slice(0, fileLink.lastIndexOf("/")) + `/download/${fileName}`;
+
+    const row = generateElement("div", "row mod-row");
+
+    const name = generateElement("div", "col-4 mod-name", element.name);
+
+    const version = generateElement(
+      "div",
+      "col-4 mod-version",
+      element.version
+    );
+
+    if (element.version != includeVersion) {
+      version.css("color", "red");
+    }
+
+    const link = generateElement("div", "col-4 mod-link");
+
+    const anchorList = generateElement("a", "", "List");
+    anchorList.attr({
+      target: "_blank",
+      href: fileLink,
+    });
+
+    const anchorFile = generateElement("a", "", "File");
+    anchorFile.attr({
+      target: "_blank",
+      href: element.link,
+    });
+
+    const anchorDownload = generateElement("a", "", "Download");
+    anchorDownload.attr({
+      target: "_blank",
+      href: downloadLink,
+    });
+
+    row.append(name);
+    row.append(version);
+    link.append(anchorList);
+    link.append(anchorFile);
+    link.append(anchorDownload);
+    row.append(link);
+
+    $("#resource-packs").append(row);
   });
 }
 

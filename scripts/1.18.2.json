@@ -126,5 +126,12 @@ list_1182 = {
       "link": "https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric/files/3687499"
     }
   ],
+  "resourcePacks": [
+    {
+      "name": "Enchanted Books",
+      "version": "1.18.2",
+      "link": "https://www.curseforge.com/minecraft/texture-packs/xalis-enchanted-books/files/4400733"
+    },
+  ],
   "banner": "./img/banner-118.jpg"
 }
