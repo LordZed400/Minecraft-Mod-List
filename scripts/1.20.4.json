@@ -48,11 +48,6 @@ list_1204 = {
       "ext": "https://modrinth.com/mod/lambdynamiclights/versions"
     },
     {
-      "name": "Easier Crafting",
-      "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/easiercrafting/files/4954706"
-    },
-    {
       "name": "Easier Village Trading",
       "version": "1.20.4",
       "link": "https://www.curseforge.com/minecraft/mc-mods/easiervillagertrading/files/4963302"
@@ -73,6 +68,11 @@ list_1204 = {
       "link": "https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/5485655",
       "ext": "https://modrinth.com/mod/iris/versions",
       "extlink": "https://modrinth.com/mod/iris/version/1.7.2+1.20.4"
+    },
+    {
+      "name": "Just Enough Items (JEI)",
+      "version": "1.20.4",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/jei/files/5846846"
     },
     {
       "name": "Litematica",

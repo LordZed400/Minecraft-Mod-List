@@ -51,11 +51,6 @@ list_1214 = {
       "extver": "1.21.4"
     },
     {
-      "name": "Easier Crafting",
-      "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/easiercrafting/files/4954706"
-    },
-    {
       "name": "Easier Village Trading",
       "version": "1.20.4",
       "link": "https://www.curseforge.com/minecraft/mc-mods/easiervillagertrading/files/4963302"
@@ -77,6 +72,11 @@ list_1214 = {
       "ext": "https://modrinth.com/mod/iris/versions",
       "extver": "1.21.4",
       "extlink": "https://modrinth.com/mod/iris/version/1.8.8+1.21.4-fabric"
+    },
+    {
+      "name": "Just Enough Items (JEI)",
+      "version": "1.21.1",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/jei/files/5846878"
     },
     {
       "name": "Litematica",
