@@ -176,7 +176,7 @@ function generateResourcePacks(list, includeVersion) {
   });
 }
 
-var currentVersion = "1.18.2";
+var currentVersion = "1.20.4";
 
 $(function () {
   const selectElement = $("#version");
