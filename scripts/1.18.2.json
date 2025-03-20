@@ -130,7 +130,14 @@ list_1182 = {
     {
       "name": "Enchanted Books",
       "version": "1.18.2",
-      "link": "https://www.curseforge.com/minecraft/texture-packs/xalis-enchanted-books/files/4400733"
+      "link": "https://www.curseforge.com/minecraft/texture-packs/xalis-enchanted-books/files/5680199"
+    },
+  ],
+  "shaderPacks": [
+    {
+      "name": "Complementary Shader",
+      "version": "1.18.2",
+      "link": "https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/6137622"
     },
   ],
   "banner": "./img/banner-118.jpg"

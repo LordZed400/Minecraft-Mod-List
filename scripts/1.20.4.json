@@ -37,11 +37,6 @@ list_1204 = {
       "link": "https://www.curseforge.com/minecraft/mc-mods/clickthrough/files/4963284"
     },
     {
-      "name": "Complementary Shader",
-      "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/4913943"
-    },
-    {
       "name": "Dynamic FPS",
       "version": "1.20.4",
       "link": "https://www.curseforge.com/minecraft/mc-mods/dynamic-fps/files/4773500"
@@ -149,7 +144,14 @@ list_1204 = {
     {
       "name": "Enchanted Books",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/texture-packs/xalis-enchanted-books/files/4400733"
+      "link": "https://www.curseforge.com/minecraft/texture-packs/xalis-enchanted-books/files/5680199"
+    },
+  ],
+  "shaderPacks": [
+    {
+      "name": "Complementary Shader",
+      "version": "1.20.4",
+      "link": "https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/6137622"
     },
   ],
   "banner": "./img/banner-120.jpg"

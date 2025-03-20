@@ -118,6 +118,7 @@
     width: 100px;
 }
 
-.resource-pack-container {
+.resource-pack-container,
+.shader-pack-container {
     margin-top: 25px;
 }

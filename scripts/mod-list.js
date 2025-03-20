@@ -66,7 +66,8 @@ function changeVersion(version) {
   var jsonData = window[fileVar];
   $(".game-header-art").css("background-image", `url(${jsonData.banner})`);
   manageList(jsonData.modList, version);
-  generateResourcePacks(jsonData.resourcePacks, version);
+  generatePacks("resource", jsonData.resourcePacks, version);
+  generatePacks("shader", jsonData.shaderPacks, version);
 }
 
 function sort(list) {
@@ -120,12 +121,14 @@ function generateAdditionalLinks() {
   });
 }
 
-function generateResourcePacks(list, includeVersion) {
-  var resourcePacks = sort(list);
+function generatePacks(type, list, includeVersion) {
+  if (list == null ) return;
+  
+  var packs = sort(list);
 
-  $("#resource-packs").html("");
+  $(`#${type}-packs`).html("");
 
-  resourcePacks.forEach((element) => {
+  packs.forEach((element) => {
     const fileLink = element.link.slice(0, element.link.lastIndexOf("/"));
     const fileName = element.link.split("/").pop();
     const downloadLink =
@@ -172,7 +175,7 @@ function generateResourcePacks(list, includeVersion) {
     link.append(anchorDownload);
     row.append(link);
 
-    $("#resource-packs").append(row);
+    $(`#${type}-packs`).append(row);
   });
 }
 
