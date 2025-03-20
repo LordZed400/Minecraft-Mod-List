@@ -12,6 +12,15 @@ function manageList(list, includeVersion) {
     const row = generateElement("div", "row mod-row");
 
     const name = generateElement("div", "col-4 mod-name", element.name);
+    if (element.ext != null) {
+      const externalLink = generateElement("a", "ext-link", "EXT");
+      externalLink.attr({
+        title: `Modrinth (v${element.version})`,
+        target: "_blank",
+        href: element.extlink == null ? element.ext : element.extlink,
+      });
+      name.append(externalLink);
+    }
 
     const version = generateElement(
       "div",
@@ -122,8 +131,8 @@ function generateAdditionalLinks() {
 }
 
 function generatePacks(type, list, includeVersion) {
-  if (list == null ) return;
-  
+  if (list == null) return;
+
   var packs = sort(list);
 
   $(`#${type}-packs`).html("");
