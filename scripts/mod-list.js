@@ -13,7 +13,7 @@ function manageList(list, includeVersion) {
 
     const name = generateElement("div", "col-4 mod-name", element.name);
     if (element.ext != null) {
-      const externalLink = generateElement("a", "ext-link", `v${element.extver}`);
+      const externalLink = generateElement("a", "ext-link", element.extver ? `v${element.extver}` : "EXT" );
       externalLink.attr({
         title: `Modrinth (v${element.version})`,
         target: "_blank",

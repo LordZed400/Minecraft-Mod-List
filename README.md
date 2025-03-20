@@ -8,3 +8,6 @@ Currently this includes the following Minecraft Versions:
 - 1.20.1
 - 1.20.4
 - 1.21.4
+
+# Screenshots
+![Main Page](img/website.png)
