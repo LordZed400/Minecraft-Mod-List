@@ -44,6 +44,15 @@ additional_links = [
     ]
   },
   {
+    "name": "Create Mod",
+    "links": [
+      {
+        "title": "View Link",
+        "url": "https://www.curseforge.com/minecraft/mc-mods/create-fabric"
+      },
+    ]
+  },
+  {
     "name": "Command Generation",
     "links": [
       {
@@ -65,7 +74,7 @@ additional_links = [
     ]
   },
   {
-    "name": "Chunk Information",
+    "name": "Seed Information",
     "links": [
       {
         "title": "View Link",
