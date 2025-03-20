@@ -179,7 +179,7 @@ function generatePacks(type, list, includeVersion) {
   });
 }
 
-var currentVersion = "1.20.4";
+var currentVersion = "1.21.4";
 
 $(function () {
   const selectElement = $("#version");
