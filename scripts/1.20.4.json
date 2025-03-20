@@ -19,17 +19,17 @@ list_1204 = {
     {
       "name": "Better F3",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/betterf3/files/4964327"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/betterf3/files/5199614"
     },
     {
       "name": "Better Third Person",
-      "version": "1.20.2",
+      "version": "1.20.4",
       "link": "https://www.curseforge.com/minecraft/mc-mods/better-third-person/files/4596636"
     },
     {
       "name": "Block Meter",
-      "version": "1.20.2",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/blockmeterfabric/files/4798040"
+      "version": "1.20.4",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/blockmeterfabric/files/5416471"
     },
     {
       "name": "Click Through Signs",
@@ -39,12 +39,12 @@ list_1204 = {
     {
       "name": "Dynamic FPS",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/dynamic-fps/files/4773500"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/dynamic-fps/files/6250847"
     },
     {
       "name": "Dynamic Lights",
-      "version": "1.20.2",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights/files/4859073",
+      "version": "1.20.4",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights/files/5083619",
       "ext": "https://modrinth.com/mod/lambdynamiclights/versions"
     },
     {
@@ -60,7 +60,7 @@ list_1204 = {
     {
       "name": "Fabric API",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/fabric-api/files/4940245"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/fabric-api/files/5664862"
     },
     {
       "name": "Grid",
@@ -70,14 +70,14 @@ list_1204 = {
     {
       "name": "Iris Shaders",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/4861695",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/irisshaders/files/5485655",
       "ext": "https://modrinth.com/mod/iris/versions",
-      "extlink": "https://modrinth.com/mod/iris/version/1.6.14+1.20.4"
+      "extlink": "https://modrinth.com/mod/iris/version/1.7.2+1.20.4"
     },
     {
       "name": "Litematica",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/litematica/files/4946471"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/litematica/files/5393557"
     },
     {
       "name": "Lithium",
@@ -88,51 +88,41 @@ list_1204 = {
     {
       "name": "MaLiLib",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/malilib/files/4946328"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/malilib/files/5393564"
     },
     {
       "name": "MiniHUD",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/minihud/files/4946335"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/minihud/files/5096818"
     },
     {
       "name": "Mod Menu",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/modmenu/files/4159524",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/modmenu/files/5441535",
       "ext": "https://modrinth.com/mod/modmenu/versions",
-      "extlink": "https://modrinth.com/mod/modmenu/version/9.0.0"
+      "extlink": "https://modrinth.com/mod/modmenu/version/9.2.0"
     },
     {
       "name": "Not Enough Crashes",
-      "version": "1.20.2",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/not-enough-crashes/files/4762979"
-    },
-    {
-      "name": "OptiFabric",
-      "version": "1.20.1",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/optifabric/files/4642832"
-    },
-    {
-      "name": "Phosphor",
-      "version": "1.19.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/phosphor/files/3832074"
+      "version": "1.20.4",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/not-enough-crashes/files/5083301"
     },
     {
       "name": "Sodium",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/sodium/files/4145281",
+      "link": "https://www.curseforge.com/minecraft/mc-mods/sodium/files/5092261",
       "ext": "https://modrinth.com/mod/sodium/versions",
-      "extlink": "https://modrinth.com/mod/sodium/version/mc1.20.3-0.5.5"
+      "extlink": "https://modrinth.com/mod/sodium/version/mc1.20.4-0.5.8"
     },
     {
       "name": "Tweakeroo",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/tweakeroo/files/4946344"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/tweakeroo/files/5681626"
     },
     {
       "name": "WorldEdit",
       "version": "1.20.4",
-      "link": "https://www.curseforge.com/minecraft/mc-mods/worldedit/files/4954407"
+      "link": "https://www.curseforge.com/minecraft/mc-mods/worldedit/files/5168651"
     },
     {
       "name": "WorldEdit CUI",
