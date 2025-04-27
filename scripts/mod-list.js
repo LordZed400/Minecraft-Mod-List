@@ -19,6 +19,9 @@ function manageList(list, includeVersion) {
         target: "_blank",
         href: element.extlink == null ? element.ext : element.extlink,
       });
+      if (element.extver != includeVersion) {
+        externalLink.css("color", "red");
+      }
       name.append(externalLink);
     }
 
@@ -188,7 +191,7 @@ function generatePacks(type, list, includeVersion) {
   });
 }
 
-var currentVersion = "1.21.4";
+var currentVersion = "1.21.5";
 
 $(function () {
   const selectElement = $("#version");
