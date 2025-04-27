@@ -20,22 +20,15 @@
   background: linear-gradient(180deg, var(--bg-gradient-start) 0, var(--bg-gradient-middle) 90%, var(--bg-gradient-end) 100%);
   border: 0 solid var(--border-color);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 18rem;
   margin: 0 0 -100px 0;
   overflow: hidden;
-  position: relative;
-  transition: 0.5s;
+  transition: 0.5s all ease-in-out;
 }
 
 /* Game Header Art Styles */
 .game-header-art {
   background: no-repeat center/cover;
-  height: 100%;
-  position: absolute;
-  width: 100%;
   z-index: -1;
 }
 
@@ -48,10 +41,8 @@
 .page-title {
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--text-color);
-  display: inline-block;
   font-family: "Minecraft";
   padding: 10px 20px 20px;
-  text-align: center;
   transform: translateY(-80px);
   -webkit-text-stroke: var(--text-stroke-black);
 }
@@ -99,10 +90,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin: 5px 0;
   padding: 5px;
-}
-
-.borderless-row {
-  border: none;
 }
 
 .mod-row {
