@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Minecraft";
-  src: url(../fonts/MinecraftTen-VGORe.ttf);
+  src: url(../font/MinecraftTen-VGORe.ttf);
 }
 
 /* CSS Variables for consistent styling */
@@ -120,7 +120,7 @@
 }
 
 #version {
-  width: 100px;
+  width: 200px;
 }
 
 /* Resource and Shader Pack Containers */

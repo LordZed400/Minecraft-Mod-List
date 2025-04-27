@@ -110,7 +110,7 @@ const changeVersion = (version) => {
   const fileVar = getFileVar(version);
   const jsonData = window[fileVar];
 
-  $(".game-header-art").css("background-image", `url(${jsonData.banner})`);
+  $(".game-header-art").css("background-image", `url(./img/${jsonData.banner ?? 'banner.png'})`);
   manageList(jsonData.modList, version);
   generatePacks("resource", jsonData.resourcePacks, version);
   generatePacks("shader", jsonData.shaderPacks, version);
