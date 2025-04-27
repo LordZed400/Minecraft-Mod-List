@@ -1,203 +1,133 @@
-function manageList(list, includeVersion) {
-  var modList = sort(list);
+// Helper to create file-related links
+const createFileLinks = (url) => {
+  const fileLink = url.slice(0, url.lastIndexOf("/"));
+  const fileName = url.split("/").pop();
+  const downloadLink = fileLink.slice(0, fileLink.lastIndexOf("/")) + `/download/${fileName}`;
+  return { fileLink, downloadLink };
+};
 
-  $("#fabric-mods").html("");
+// Helper to generate multiple anchor elements
+const generateAnchors = (fileLink, fileUrl, downloadUrl) => [
+  generateElement("a", "", "List").attr({ target: "_blank", href: fileLink }),
+  generateElement("a", "", "File").attr({ target: "_blank", href: fileUrl }),
+  generateElement("a", "", "Download").attr({ target: "_blank", href: downloadUrl }),
+];
 
-  modList.forEach((element) => {
-    const fileLink = element.link.slice(0, element.link.lastIndexOf("/"));
-    const fileName = element.link.split("/").pop();
-    const downloadLink =
-      fileLink.slice(0, fileLink.lastIndexOf("/")) + `/download/${fileName}`;
+// Helper to build a row element
+const buildRow = (nameEl, versionEl, linkEl) => 
+  generateElement("div", "row mod-row").append(nameEl, versionEl, linkEl);
 
-    const row = generateElement("div", "row mod-row");
+// Clear container by ID
+const clearContainer = (id) => $(`#${id}`).empty();
 
-    const name = generateElement("div", "col-4 mod-name", element.name);
-    if (element.ext != null) {
-      const externalLink = generateElement("a", "ext-link", element.extver ? `v${element.extver}` : "EXT" );
-      externalLink.attr({
-        title: `Modrinth (v${element.version})`,
-        target: "_blank",
-        href: element.extlink == null ? element.ext : element.extlink,
-      });
-      if (element.extver != includeVersion) {
-        externalLink.css("color", "red");
-      }
+// Sort list alphabetically by name
+const sortByName = (list) => list.sort((a, b) => a.name.localeCompare(b.name));
+
+// Generate jQuery element
+const generateElement = (tag = "div", className = "", text = "") => 
+  $(`<${tag}></${tag}>`).addClass(className).html(text);
+
+// Manage the mod list display
+const manageList = (list, includeVersion) => {
+  const sortedList = sortByName(list);
+  clearContainer("fabric-mods");
+
+  sortedList.forEach((mod) => {
+    const { fileLink, downloadLink } = createFileLinks(mod.link);
+
+    const name = generateElement("div", "col-4 mod-name", mod.name);
+    if (mod.ext) {
+      const externalLink = generateElement("a", "ext-link", mod.extver ? `v${mod.extver}` : "EXT")
+        .attr({
+          title: `Modrinth (v${mod.version})`,
+          target: "_blank",
+          href: mod.extlink ?? mod.ext,
+        });
+
+      if (mod.extver !== includeVersion) externalLink.css("color", "red");
       name.append(externalLink);
     }
 
-    const version = generateElement(
-      "div",
-      "col-4 mod-version",
-      element.version
+    const version = generateElement("div", "col-4 mod-version", mod.version);
+    if (mod.version !== includeVersion) version.css("color", "red");
+
+    const link = generateElement("div", "col-4 mod-link").append(
+      ...generateAnchors(fileLink, mod.link, downloadLink)
     );
 
-    if (element.version != includeVersion) {
-      version.css("color", "red");
-    }
-
-    const link = generateElement("div", "col-4 mod-link");
-
-    const anchorList = generateElement("a", "", "List");
-    anchorList.attr({
-      target: "_blank",
-      href: fileLink,
-    });
-
-    const anchorFile = generateElement("a", "", "File");
-    anchorFile.attr({
-      target: "_blank",
-      href: element.link,
-    });
-
-    const anchorDownload = generateElement("a", "", "Download");
-    anchorDownload.attr({
-      target: "_blank",
-      href: downloadLink,
-    });
-
-    row.append(name);
-    row.append(version);
-    link.append(anchorList);
-    link.append(anchorFile);
-    link.append(anchorDownload);
-    row.append(link);
-
+    const row = buildRow(name, version, link);
     $("#fabric-mods").append(row);
   });
-}
+};
 
-function generateElement(elementStr = "div", classStr = "", textStr = "") {
-  const element = $(`<${elementStr}></${elementStr}>`);
-  element.addClass(classStr);
-  element.html(textStr);
-  return element;
-}
+// Manage resource or shader packs
+const generatePacks = (type, list, includeVersion) => {
+  if (!list) return;
+  const sortedList = sortByName(list);
 
-function changeVersion(version) {
+  clearContainer(`${type}-packs`);
+
+  sortedList.forEach((pack) => {
+    const { fileLink, downloadLink } = createFileLinks(pack.link);
+
+    const name = generateElement("div", "col-4 mod-name", pack.name);
+    const version = generateElement("div", "col-4 mod-version", pack.version);
+    if (pack.version !== includeVersion) version.css("color", "red");
+
+    const link = generateElement("div", "col-4 mod-link").append(
+      ...generateAnchors(fileLink, pack.link, downloadLink)
+    );
+
+    const row = buildRow(name, version, link);
+    $(`#${type}-packs`).append(row);
+  });
+};
+
+// Generate additional external links section
+const generateAdditionalLinks = () => {
+  clearContainer("additional-links");
+
+  additional_links.forEach((entry) => {
+    const name = generateElement("div", "col-6 mod-name", entry.name);
+    const linkContainer = generateElement("div", "col-6 mod-link");
+
+    entry.links.forEach((link, index) => {
+      linkContainer.append(
+        generateElement("a", "", link.title).attr({ target: "_blank", href: link.url })
+      );
+      if (index < entry.links.length - 1) {
+        linkContainer.append($("<br/>"));
+      }
+    });
+
+    const row = buildRow(name, linkContainer);
+    $("#additional-links").append(row);
+  });
+};
+
+// Handle version change
+const changeVersion = (version) => {
   const fileVar = getFileVar(version);
-  var jsonData = window[fileVar];
+  const jsonData = window[fileVar];
+
   $(".game-header-art").css("background-image", `url(${jsonData.banner})`);
   manageList(jsonData.modList, version);
   generatePacks("resource", jsonData.resourcePacks, version);
   generatePacks("shader", jsonData.shaderPacks, version);
-}
+};
 
-function sort(list) {
-  list.sort((a, b) => {
-    let x = a.name.toLowerCase();
-    let y = b.name.toLowerCase();
-    if (x < y) {
-      return -1;
-    }
-    if (x > y) {
-      return 1;
-    }
-    return 0;
-  });
-  return list;
-}
+// Get file variable name based on version
+const getFileVar = (version) => `list_${version.replaceAll(".", "")}`;
 
-function getFileVar(version) {
-  return "list_" + version.replaceAll(".", "");
-}
+// Default current version
+const currentVersion = "1.21.5";
 
-function generateAdditionalLinks() {
-  const linkList = additional_links;
-
-  $("#additional-links").html("");
-
-  linkList.forEach((element) => {
-    const row = generateElement("div", "row mod-row");
-
-    const name = generateElement("div", "col-6 mod-name", element.name);
-
-    const linkElement = generateElement("div", "col-6 mod-link");
-
-    element.links.forEach((link, index) => {
-      const anchorList = generateElement("a", "", link.title);
-      anchorList.attr({
-        target: "_blank",
-        href: link.url,
-      });
-      linkElement.append(anchorList);
-      if (index != element.links.length) {
-        const breakElement = $(`<br/>`);
-        linkElement.append(breakElement);
-      }
-    });
-
-    row.append(name);
-    row.append(linkElement);
-
-    $("#additional-links").append(row);
-  });
-}
-
-function generatePacks(type, list, includeVersion) {
-  if (list == null) return;
-
-  var packs = sort(list);
-
-  $(`#${type}-packs`).html("");
-
-  packs.forEach((element) => {
-    const fileLink = element.link.slice(0, element.link.lastIndexOf("/"));
-    const fileName = element.link.split("/").pop();
-    const downloadLink =
-      fileLink.slice(0, fileLink.lastIndexOf("/")) + `/download/${fileName}`;
-
-    const row = generateElement("div", "row mod-row");
-
-    const name = generateElement("div", "col-4 mod-name", element.name);
-
-    const version = generateElement(
-      "div",
-      "col-4 mod-version",
-      element.version
-    );
-
-    if (element.version != includeVersion) {
-      version.css("color", "red");
-    }
-
-    const link = generateElement("div", "col-4 mod-link");
-
-    const anchorList = generateElement("a", "", "List");
-    anchorList.attr({
-      target: "_blank",
-      href: fileLink,
-    });
-
-    const anchorFile = generateElement("a", "", "File");
-    anchorFile.attr({
-      target: "_blank",
-      href: element.link,
-    });
-
-    const anchorDownload = generateElement("a", "", "Download");
-    anchorDownload.attr({
-      target: "_blank",
-      href: downloadLink,
-    });
-
-    row.append(name);
-    row.append(version);
-    link.append(anchorList);
-    link.append(anchorFile);
-    link.append(anchorDownload);
-    row.append(link);
-
-    $(`#${type}-packs`).append(row);
-  });
-}
-
-var currentVersion = "1.21.5";
-
-$(function () {
-  const selectElement = $("#version");
-  selectElement.change(function () {
+// Initialize when document is ready
+$(() => {
+  $("#version").change(function () {
     changeVersion(this.value);
   });
+
   changeVersion(currentVersion);
   generateAdditionalLinks();
 });
